@@ -1,4 +1,2 @@
-
-
 def home(request):
     pass
