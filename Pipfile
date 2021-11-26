@@ -12,6 +12,7 @@ dj-database-url = "*"
 psycopg2-binary = "*"
 django-s3-folder-storage = "*"
 collectfast = "*"
+sentry-sdk = "*"
 
 [dev-packages]
 flake8 = "*"
