@@ -10,8 +10,8 @@
     <meta name="description" content="Source code generated using layoutit.com">
     <meta name="author" content="LayoutIt!">
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="/static/base/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/base/css/style.css" rel="stylesheet">
 
 </head>
 
@@ -28,20 +28,20 @@
             <div class="row">
                 <div class="col-md-12">
                     <h2>
-                        <h2>Questão 1</h2>
-                        <h3>Qual destas palavras é uma palavra reservada em Python?</h3>
+                        <h2>Questão {{indice_da_questao}}</h2>
+                        <h3>{{pergunta.enunciado}}</h3>
                     </h2>
                     <div class="container">
 
                         <div id="loader"></div>
 
                         <div id="game" class="justify-center flex-column animate-bottom hidden">
-
+                            {% for alternativa in pergunta.alternativas.array %}
                             <div class="choice-container">
-                                <p class="choice-prefix">A</p>
-                                <p class="choice-text">copy</p>
+                                <p class="choice-prefix">{% cycle 'A' 'B' 'C' 'D'%}</p>
+                                <p class="choice-text">{{alternativa}}</p>
                             </div>
-
+                            {% endfor %}
 
 
                         </div>
