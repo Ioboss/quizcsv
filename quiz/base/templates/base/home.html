@@ -32,9 +32,10 @@
 
 				</div>
 				<form class="login-form" method="post" action="/">
+                    {{ formulario.errors }}
             {% csrf_token %}
-            <input type="nome" name="nome" placeholder="NOME" />
-            <input type="email" name="email" placeholder="EMAIL"/>
+            <input type="nome" name="nome" placeholder="NOME" {{formulario.nome.value}} />
+            <input type="email" name="email" placeholder="EMAIL" {{formulario.email.value}} />
             <button type="submit">Entrar</button>
         </form>
 			</div>
